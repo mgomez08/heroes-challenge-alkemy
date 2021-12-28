@@ -4,6 +4,7 @@ import { signIn } from "../services/signIn";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
+import { UiContext } from "../context/UiContext";
 
 const validate = (values: FormLoginValues) => {
   const errors: Partial<FormLoginValues> = {};
@@ -20,6 +21,7 @@ const validate = (values: FormLoginValues) => {
 
 export const Login = () => {
   const navigate = useNavigate();
+  const { handleOpenNotification } = useContext(UiContext);
   const { login } = useContext(AuthContext);
   const handleSubmit = async (data: FormLoginValues) => {
     const result = await signIn(data);
@@ -27,7 +29,7 @@ export const Login = () => {
       login(result.data.token);
       navigate("/");
     } else {
-      alert(result.error);
+      handleOpenNotification(result.error, "danger");
     }
   };
 

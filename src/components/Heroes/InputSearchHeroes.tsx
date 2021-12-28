@@ -1,4 +1,6 @@
 import { Formik, Field, Form } from "formik";
+import { useContext } from "react";
+import { UiContext } from "../../context/UiContext";
 import { getHeroByName } from "../../services/getHeroByName";
 import { FormSearchHeroesValue } from "../../types/types";
 
@@ -15,12 +17,13 @@ const validate = (values: FormSearchHeroesValue) => {
 };
 
 export const InputSearchHeroes: React.FC<Props> = ({ setHeroesSearched }) => {
+  const { handleOpenNotification } = useContext(UiContext);
   const handleSubmit = async (data: FormSearchHeroesValue) => {
     const result = await getHeroByName(data.search);
     if (result.data.response === "success") {
       setHeroesSearched(result.data.results);
     } else {
-      console.log(result.data.error);
+      handleOpenNotification(result.data.error, "danger");
       setHeroesSearched([]);
     }
   };

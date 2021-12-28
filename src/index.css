@@ -207,6 +207,7 @@ code {
 /* STYLES FOR NOTIFICATION */
 .notification-top {
   top: 25px;
+  z-index: 20;
 }
 /* END STYLES FOR NOTIFICATION */
 
