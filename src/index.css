@@ -1,13 +1,235 @@
+:root {
+  --bg-primary: #0d1631;
+  --bg-secondary: #1c2541;
+  --text-primary: #fff;
+  --text-secondary: #54ffe9;
+  --spacing: 8px;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  min-height: 100vh;
+  color: var(--text-primary) !important;
+  background-color: var(--bg-primary) !important;
+}
+#root {
+  height: 100%;
+  width: 100%;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* STYLES FOR FORM*/
+.form-container {
+  position: relative;
+  z-index: 10;
+  max-width: 28rem;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 calc(var(--spacing) * 2);
+  justify-content: center;
+  height: 100vh;
+}
+
+.cover-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.25);
+}
+/* END STYLES FOR FORM*/
+
+/* STYLES FOR NAVBAR */
+.bg-navbar {
+  background-color: var(--bg-secondary);
+}
+.justify-menu {
+  justify-content: end;
+}
+.nav-link-active {
+  color: var(--text-secondary) !important;
+}
+/* END STYLES FOR NAVBAR */
+
+/* STYLES FOR HEROES TEAM */
+.heroes-team-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing);
+}
+@media screen and (max-width: 1200px) {
+  .heroes-team-container {
+    flex-direction: column;
+  }
+}
+
+/* END STYLES FOR HEROES TEAM */
+
+/* STYLES FOR SEARCH HEROES */
+.search-heroes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing);
+  padding: 0 calc(var(--spacing) * 2);
+}
+.search-form-container {
+  width: 100%;
+  max-width: 992px;
+  display: flex;
+  gap: var(--spacing);
+}
+/* END STYLES FOR SEARCH HEROES */
+
+/* STYLES FOR GRID HEROES */
+.grid-heroes-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing) * 2);
+}
+.grid-team {
+  max-width: 944px;
+  width: 60%;
+}
+@media screen and (max-width: 1200px) {
+  .grid-team {
+    width: 100%;
+  }
+}
+/* END STYLES FOR GRID HEROES */
+
+/* STYLES FOR CARD HERO */
+.hero-card {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-secondary) !important;
+  text-align: center;
+  width: 14rem;
+}
+.hero-img {
+  width: 100%;
+  height: 21rem;
+  object-fit: cover;
+}
+/* END STYLES FOR CARD HERO */
+
+/* STYLES FOR STAT ITEM */
+.stat-item {
+  display: flex;
+  text-align: start;
+  line-height: 1.2;
+}
+.stat-name {
+  min-width: 60%;
+  text-align: start;
+}
+.stat-value {
+  min-width: 40%;
+}
+
+.intelligence {
+  color: #7bb9e1;
+}
+.strength {
+  color: #ff9393;
+}
+.speed {
+  color: #c0c0c0;
+}
+.durability {
+  color: #ff9933;
+}
+.power {
+  color: #ff6363;
+}
+.combat {
+  color: #f787ff;
+}
+/* END STYLES FOR STAT ITEM */
+
+/* STYLES FOR STATISTICS HEROES TEAM */
+.statistics-heroes-container {
+  min-width: 350px;
+  background-color: var(--bg-secondary);
+  width: 40%;
+}
+.statistics-heroes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--spacing);
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1200px) {
+  .statistics-heroes-container {
+    width: 100%;
+  }
+  .statistics-heroes {
+    flex-direction: row;
+  }
+}
+.statistics-heroes-container h2 {
+  color: var(--text-secondary);
+}
+.powerstats {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: calc(var(--spacing) * 2);
+  flex-wrap: wrap;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+.physicalstats {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+/* END STYLES FOR STATISTICS HEROES TEAM */
+
+/* STYLES FOR NOTIFICATION */
+.notification-top {
+  top: 25px;
+}
+/* END STYLES FOR NOTIFICATION */
+
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+.img-modal {
+  object-fit: contain;
+}
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.physical-characteristics {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: calc(var(--spacing) * 2);
+}
+.item-modal {
+  line-height: 1.1;
 }
