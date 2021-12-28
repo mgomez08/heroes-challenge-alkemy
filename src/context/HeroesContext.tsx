@@ -39,7 +39,7 @@ export const HeroesProvider = ({ children }: ProviderProps) => {
     localStorage.setItem("heroesTeam", JSON.stringify(heroesTeam));
     calculatePowerStatsTeam();
     calculatePhysicalStatsTeam();
-    //react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [heroesTeam]);
 
   /*METHODS FOR HEROES*/
