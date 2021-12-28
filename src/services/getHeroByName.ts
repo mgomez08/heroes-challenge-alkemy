@@ -5,6 +5,7 @@ export const getHeroByName = async (name: string) => {
   const url = `${BASE_URL_SUPERHERO}/${ACCESSTOKEN}/search/${name}`;
   const headers = {
     "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "*",
   };
   try {
     const response = axios.get(url, { headers });
