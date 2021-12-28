@@ -46,7 +46,11 @@ export const Modal = () => {
               </button>
             </div>
             <div className="modal-body">
-              <img className="hero-img img-modal" src={hero?.image?.url}></img>
+              <img
+                className="hero-img img-modal"
+                src={hero?.image?.url}
+                alt={`${hero?.name}`}
+              ></img>
               <h4>Physical characteristics</h4>
               <div className="physical-characteristics">
                 <div>

@@ -26,6 +26,7 @@ const initialStatePhysicalStatsTeam: Physical = {
   height: "0",
   weight: "0",
 };
+
 export const HeroesProvider = ({ children }: ProviderProps) => {
   const [heroesTeam, setHeroesTeam] = useState<Hero[]>(initialStateHeroesTeam);
   const [powerStatsTeam, setPowerStatsTeam] = useState(
@@ -38,6 +39,7 @@ export const HeroesProvider = ({ children }: ProviderProps) => {
     localStorage.setItem("heroesTeam", JSON.stringify(heroesTeam));
     calculatePowerStatsTeam();
     calculatePhysicalStatsTeam();
+    //react-hooks/exhaustive-deps
   }, [heroesTeam]);
 
   /*METHODS FOR HEROES*/
@@ -113,6 +115,7 @@ export const HeroesProvider = ({ children }: ProviderProps) => {
           parseInt(powerStats[stat]) + parseInt(powerstats[stat])
         ).toString();
       }
+      return null;
     });
     setPowerStatsTeam(powerStats);
   };
@@ -131,6 +134,7 @@ export const HeroesProvider = ({ children }: ProviderProps) => {
           ).toString();
         }
       }
+      return null;
     });
     setphysicalTeam({
       height: `${Math.floor(

@@ -38,7 +38,7 @@ export const HeroCard: React.FC<Props> = ({ heroItem, mode }) => {
       <img
         src={heroItem.image.url}
         className="card-img-top hero-img"
-        alt={`Image of ${heroItem.name}`}
+        alt={`${heroItem.name}`}
       />
       {mode === "team" ? <ListStats stats={heroItem.powerstats} /> : null}
       <div className="card-body">

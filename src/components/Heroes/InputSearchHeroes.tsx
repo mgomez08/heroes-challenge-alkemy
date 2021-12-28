@@ -1,6 +1,6 @@
 import { Formik, Field, Form } from "formik";
 import { getHeroByName } from "../../services/getHeroByName";
-import { FormSearchHeroesValue, Hero } from "../../types/types";
+import { FormSearchHeroesValue } from "../../types/types";
 
 interface Props {
   setHeroesSearched: (heroes: any) => void;
