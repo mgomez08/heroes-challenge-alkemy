@@ -111,9 +111,13 @@ export const HeroesProvider = ({ children }: ProviderProps) => {
     };
     heroesTeam.map(({ powerstats }) => {
       for (let stat in powerstats) {
-        powerStats[stat] = (
-          parseInt(powerStats[stat]) + parseInt(powerstats[stat])
-        ).toString();
+        if (powerstats[stat] !== "null") {
+          powerStats[stat] = (
+            parseInt(powerStats[stat]) + parseInt(powerstats[stat])
+          ).toString();
+        } else {
+          powerStats[stat] = (parseInt(powerStats[stat]) + 0).toString();
+        }
       }
       return null;
     });
