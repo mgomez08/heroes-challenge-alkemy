@@ -49,7 +49,7 @@ export const HeroCard: React.FC<Props> = ({ heroItem, mode }) => {
         ) : (
           <>
             <button className="btn btn-danger mb-2" onClick={handleRemoveHero}>
-              Remove of your team
+              Remove
             </button>
             <button
               className="btn btn-info"
