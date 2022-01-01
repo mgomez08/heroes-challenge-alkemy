@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+# ![Logo](https://campus.alkemy.org/static/media/logo.a56b5107.svg) _Challenge Heroes App_
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Este es mi challenge para aplicar a la acelaración de Alkemy, esta aplicación permite la creación de un equipo de superheroes, con diferentes powerstats y características. En la aplicación se podrá buscar superheroes a través de sus nombres para agregarlos al equipo, una vez agregados, podrá ver más detalles sobre ellos o eliminarlos del equipo. También arroja estadísticas generales del equipo creado.
 
-In the project directory, you can run:
+Tecnologías utilizadas:
 
-### `npm start`
+- Typescript
+- React
+- Bootstrap
+- Formik
+- React Modal
+- Axios
+- React Router Dom V6
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## API de SuperHeroes - superheroapi
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Superheroapi es una fuente de datos cuantificada y accesible mediante programación de todos los superhéroes del universo de los cómics.
 
-### `npm test`
+> https://superheroapi.com/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⚒ Deploy
 
-### `npm run build`
+> https://heroes-challenge-alkemy.vercel.app/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📥Instalación
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para instalar esta aplicación, es necesario clonar el repositorio, instalar dependencias e iniciar el servidor, esto a través de los siguientes comandos en la terminal.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+git clone https://github.com/mgomez08/heroes-challenge-alkemy.git
+cd heroes-challenge-alkemy
+npm install O yarn install
+npm run start O yarn start
+```
 
-### `npm run eject`
+## 📱Screenshots
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![heroesapp1](https://user-images.githubusercontent.com/49167174/147862406-6204467a-5a1a-4492-8126-1dd28ed39702.PNG)
+![heroesapp2](https://user-images.githubusercontent.com/49167174/147862405-650c539d-a4f6-4522-a371-c2fa41472dfb.PNG)
+![heroesapp3](https://user-images.githubusercontent.com/49167174/147862441-7e153425-b8dd-4df0-a388-f3531ddd9ae4.PNG)
+![heroesapp4](https://user-images.githubusercontent.com/49167174/147862402-b3cac0e9-af5b-4bf4-aa5e-17dbf4ab1a35.PNG)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 📚License
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+MIT
