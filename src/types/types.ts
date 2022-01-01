@@ -9,10 +9,6 @@ export interface FormSearchHeroesValue {
 export interface ProviderProps {
   children: React.ReactNode;
 }
-export interface objectResponseType {
-  ok: boolean;
-  msg: string;
-}
 export interface AuthContextTypes {
   auth: {
     logged: boolean;
@@ -29,7 +25,6 @@ export interface HeroesContextTypes {
   powerStatsTeam: PowerStats;
   physicalTeam: Physical;
 }
-
 export interface UiContextTypes {
   Notificacion: Notification;
   setNotificacion: (openNotification: Notification) => void;
@@ -41,57 +36,42 @@ export interface UiContextTypes {
   handleCloseModal: () => void;
 }
 
-export interface Notification {
-  open: boolean;
-  msg: string;
-  type: string;
-}
-export interface Modal {
-  open: boolean;
-  hero: Hero;
-}
-
 export interface Hero {
+  appearance: Appearance;
+  biography: Biography;
+  connections: Connections;
   id: string;
-  name: string;
-  powerstats: PowerStats;
-  appearance: {
-    "eye-color": string;
-    "hair-color": string;
-    gender: string;
-    race: string;
-    height: string[];
-    weight: string[];
-  };
   image: {
     url: string;
   };
-  biography: {
-    "full-name": string;
-    "alter-egos": string;
-    aliases: string[];
-    "place-of-birth": string;
-    "first-appearance": string;
-    publisher: string;
-    alignment: string;
-  };
-  work: {
-    occupation: string;
-    base: string;
-    connections: {
-      "group-affiliation": string;
-      relatives: string;
-    };
-    appearance: {
-      gender: string;
-      race: string;
-      height: [string, string];
-      weight: [string, string];
-      "eye-color": string;
-      " hair-color": string;
-    };
-  };
+  name: string;
+  powerstats: PowerStats;
+  work: Work;
 }
+
+export type Appearance = {
+  "eye-color": string;
+  gender: string;
+  "hair-color": string;
+  height: string[];
+  race: string;
+  weight: string[];
+};
+
+export type Biography = {
+  aliases: string[];
+  alignment: string;
+  "alter-egos": string;
+  "first-appearance": string;
+  "full-name": string;
+  "place-of-birth": string;
+  publisher: string;
+};
+
+export type Connections = {
+  "group-affiliation": string;
+  relatives: string;
+};
 
 export type PowerStats = {
   [key: string]: string;
@@ -108,3 +88,22 @@ export type Physical = {
   height: string;
   weight: string;
 };
+
+export type Work = {
+  base: string;
+  occupation: string;
+};
+export interface Notification {
+  open: boolean;
+  msg: string;
+  type: string;
+}
+export interface Modal {
+  open: boolean;
+  hero: Hero;
+}
+
+export interface objectResponseType {
+  ok: boolean;
+  msg: string;
+}
