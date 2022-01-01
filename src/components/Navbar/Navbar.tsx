@@ -39,15 +39,6 @@ export const Navbar = () => {
             >
               Team
             </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                `nav-link ${isActive ? "nav-link-active" : ""}`
-              }
-              end
-              to="/search"
-            >
-              Search Hero
-            </NavLink>
             <button className="btn btn-outline-danger" onClick={logout}>
               Logout
             </button>

@@ -4,9 +4,8 @@ import { Navbar } from "../components/Navbar/Navbar";
 import { Modal } from "../components/Others/Modal";
 import { Notification } from "../components/Others/Notification";
 import { AuthContext } from "../context/AuthContext";
-import { HeroesTeam } from "../pages/HeroesTeam";
+import { Home } from "../pages/Home";
 import { Login } from "../pages/Login";
-import { SearchHeroes } from "../pages/SearchHeroes";
 import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
 
@@ -33,15 +32,7 @@ export const AppRouter = () => {
           path="/"
           element={
             <PrivateRoute>
-              <HeroesTeam />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/search"
-          element={
-            <PrivateRoute>
-              <SearchHeroes />
+              <Home />
             </PrivateRoute>
           }
         />
