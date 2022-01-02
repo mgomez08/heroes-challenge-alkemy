@@ -110,6 +110,9 @@ code {
   overflow-y: auto;
   height: 420px;
 }
+.team-category {
+  color: var(--text-secondary);
+}
 @media screen and (max-width: 1200px) {
   .grid-team {
     width: 100%;
