@@ -123,6 +123,13 @@ export const HeroesProvider = ({ children }: ProviderProps) => {
     });
     setPowerStatsTeam(powerStats);
   };
+  const getTeamCategory = () => {
+    const keys = Object.keys(powerStatsTeam);
+    const values = Object.values(powerStatsTeam).map((stat) => parseInt(stat));
+    const max = Math.max(...values);
+    const indexOfMax = values.indexOf(max);
+    return keys[indexOfMax];
+  };
   /*END METHODS FOR POWERSTATS*/
 
   const calculatePhysicalStatsTeam = () => {
@@ -157,6 +164,7 @@ export const HeroesProvider = ({ children }: ProviderProps) => {
         deleteHeroFromTeam,
         powerStatsTeam,
         physicalTeam,
+        getTeamCategory,
       }}
     >
       {children}
