@@ -24,6 +24,7 @@ export interface HeroesContextTypes {
   deleteHeroFromTeam: (heroId: string) => objectResponseType;
   powerStatsTeam: PowerStats;
   physicalTeam: Physical;
+  getTeamCategory: () => string;
 }
 export interface UiContextTypes {
   Notificacion: Notification;
