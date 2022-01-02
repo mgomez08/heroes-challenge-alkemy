@@ -3,6 +3,8 @@
 
 Este es mi challenge para aplicar a la acelaración de Alkemy, esta aplicación permite la creación de un equipo de superheroes, con diferentes powerstats y características. En la aplicación se podrá buscar superheroes a través de sus nombres para agregarlos al equipo, una vez agregados, podrá ver más detalles sobre ellos o eliminarlos del equipo. También arroja estadísticas generales del equipo creado.
 
+>https://drive.google.com/file/d/1kNbni3fBBYiAErWYIQNmlggJTNHmLgPL/view  Link de los requerimientos del challenge.
+
 Tecnologías utilizadas:
 
 - Typescript
