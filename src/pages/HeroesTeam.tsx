@@ -4,10 +4,14 @@ import { StatisticsHeroesTeam } from "../components/Heroes/StatisticsHeroesTeam"
 import { HeroesContext } from "../context/HeroesContext";
 
 export const HeroesTeam = () => {
-  const { heroesTeam } = useContext(HeroesContext);
+  const { heroesTeam, getTeamCategory } = useContext(HeroesContext);
+  const teamCategory = getTeamCategory();
   return (
     <>
       <h1>Your Heroes Team</h1>
+      <h4 className="team-category my-3">
+        Team category: <span className={teamCategory}>{teamCategory}</span>
+      </h4>
       <div className="heroes-team-container ">
         {heroesTeam?.length >= 1 ? (
           <>
