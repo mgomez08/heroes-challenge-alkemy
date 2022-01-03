@@ -9,9 +9,11 @@ export const HeroesTeam = () => {
   return (
     <>
       <h1>Your Heroes Team</h1>
-      <h4 className="team-category my-3">
-        Team category: <span className={teamCategory}>{teamCategory}</span>
-      </h4>
+      {heroesTeam?.length >= 1 && (
+        <h4 className="team-category my-3">
+          Team category: <span className={teamCategory}>{teamCategory}</span>
+        </h4>
+      )}
       <div className="heroes-team-container ">
         {heroesTeam?.length >= 1 ? (
           <>
